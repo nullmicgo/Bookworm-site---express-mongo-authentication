@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var User = require('../models/user');
-
+var mid = require('../middleware');
 
 // GET /profile
 router.get('/profile', function(req, res, next) {
@@ -45,10 +45,29 @@ router.post('/login', function(req, res,next){
         return next(err);
     }
 });
+router.get('/logout', function(req, res, next){
+  if(req.session){
+      //delete session object
+      req.session.destory(function(err){
+        if(err){
+            return next(err);
+        }
+        else{
+            return res.redirect('/');
+        }
+      })
+  }
+
+});
+
+
+
+
+
 
 
 // Get /register
-router.get('/register', function(req,res,next){
+router.get('/register', mid.loggedOut, function(req,res,next){
    return res.render('register', { title: 'Sign Up' });
 }); 
 
