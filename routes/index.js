@@ -15,6 +15,10 @@ router.post('/register', function(req,res, next){
     req.body.password &&
     req.body.confirmPassword){
         //..
+    }else{
+      var err = new Error('All fields required');
+      err.status = 400;
+      return next(err);
     }
   //return res.send('User Created');
 });
