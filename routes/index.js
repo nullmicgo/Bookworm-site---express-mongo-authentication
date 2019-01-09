@@ -2,6 +2,16 @@ var express = require('express');
 var router = express.Router();
 var User = require('../models/user');
 
+// Get /login
+router.get('/login', function(req,res,next){
+    return res.render('login',{title:'Login In'});
+});
+
+router.post('/login', function(req, res,next){
+
+});
+
+
 // Get /register
 router.get('/register', function(req,res,next){
    return res.render('register', { title: 'Sign Up' });

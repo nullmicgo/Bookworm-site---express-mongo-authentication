@@ -5,7 +5,7 @@ var session =require('express-session');
 var app = express();
 
 //use sessions for tracking logins
-app.user(session({
+app.use(session({
     secret:'treehouse love you',
     resave: true,
     saveUninitialized: false
