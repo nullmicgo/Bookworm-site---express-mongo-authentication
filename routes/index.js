@@ -45,21 +45,20 @@ router.post('/login', function(req, res,next){
         return next(err);
     }
 });
-router.get('/logout', function(req, res, next){
-  if(req.session){
-      //delete session object
-      req.session.destory(function(err){
-        if(err){
-            return next(err);
-        }
-        else{
-            return res.redirect('/');
-        }
-      })
+
+// GET /logout
+router.get('/logout', function(req, res, next) {
+  if (req.session) {
+    // delete session object
+    req.session.destroy(function(err) {
+      if(err) {
+        return next(err);
+      } else {
+        return res.redirect('/');
+      }
+    });
   }
-
 });
-
 
 
 
