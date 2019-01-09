@@ -24,3 +24,8 @@ Learn how to implement a custom user authentication system that controls users a
 # Website Screen Flow
 [![Preview Website Screen Flow](https://img.youtube.com/vi/l3CXveCMBb0/0.jpg)](https://www.youtube.com/watch?v=l3CXveCMBb0)
 
+
+
+
+[![Everything Is AWESOME](http://i.imgur.com/Ot5DWAW.png)](https://youtu.be/StTqXEQ2l-Y?t=35s "Everything Is AWESOME")
+
