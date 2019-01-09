@@ -1,14 +1,22 @@
 var express = require('express');
 var router = express.Router();
+var User = require('../models/user');
 
 // Get /register
 router.get('/register', function(req,res,next){
-   return res.render('register', { title: 'Home' });
+   return res.render('register', { title: 'Sign Up' });
 }); 
 
 // POST /register
 router.post('/register', function(req,res, next){
-  return res.render('register', { title: 'Home' });
+  if(req.body.email &&
+    req.body.name&&
+    req.bidy.favoriteBook &&
+    req.body.password &&
+    req.body.confirmPassword){
+        //..
+    }
+  //return res.send('User Created');
 });
 
 // GET /
