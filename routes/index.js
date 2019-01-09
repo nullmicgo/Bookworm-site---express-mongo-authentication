@@ -15,11 +15,29 @@ router.post('/register', function(req,res, next){
     req.body.password &&
     req.body.confirmPassword){
         //confirm that user typed same password twice
-        if(req.bodypassword != req.body.confirmPassword){
+        if(req.body.password != req.body.confirmPassword){
             var err = new Error('Passwords do not match');
             err.status = 400;
             return next(err);
         }
+
+        //create object with form input
+        var userData = {
+            email:req.body.email,
+            name: req.body.name,
+            favoriteBook: req.body.favoriteBook,
+            password: req.body.password
+        };
+
+        //use schema's create method to insert document into Mongo
+        User.create(userData, function(error, user){
+          if(error){
+              return next(error);
+          }
+          else{
+              return res.redirect('/profile');
+          }
+        });
 
 
     }else{
