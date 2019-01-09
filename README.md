@@ -16,4 +16,4 @@ Learn how to implement a custom user authentication system that controls users a
 
 
 # DB Structure
-<img src="https://raw.githubusercontent.com/nullmicgo/Bookworm-site---express-mongo-authentication/master/db_preview.png" data-canonical-src="https://raw.githubusercontent.com/nullmicgo/Bookworm-site---express-mongo-authentication/master/db_preview.png" height="400" />
+<img src="https://raw.githubusercontent.com/nullmicgo/Bookworm-site---express-mongo-authentication/master/db_preview.png" data-canonical-src="https://raw.githubusercontent.com/nullmicgo/Bookworm-site---express-mongo-authentication/master/db_preview.png"  />
